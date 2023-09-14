@@ -10,7 +10,7 @@ public interface CCClogSpamHiderConfig extends Config
 	@ConfigItem(
 			keyName = "fossilNotes",
 			name = "Hide Fossil Island Notes",
-			description = "Hide the Fossil Island Notes section of the Collection Log"
+			description = "Hide Fossil island notes Collection log CC broadcasts"
 	)
 	default boolean fossilNotes(){
 		return true;
@@ -19,9 +19,30 @@ public interface CCClogSpamHiderConfig extends Config
 	@ConfigItem(
 			keyName = "chompyHats",
 			name = "Hide Chompy hats",
-			description = "Hide the Chompy hats section of the Collection Log"
+			description = "Hide Chompy bird hats Collection log CC broadcasts"
 	)
 	default boolean chompyHats(){
 		return true;
 	}
+
+	@ConfigItem(
+			keyName = "castleWars",
+			name = "Castle Wars",
+			description = "Hide Castle Wars Collection log CC broadcasts "
+	)
+	default boolean castleWars() { return false; }
+
+	@ConfigItem(
+			keyName = "troubleBrewing",
+			name = "Trouble Brewing",
+			description = "Hide Trouble Brewing Collection log CC broadcasts "
+	)
+	default boolean troubleBrewing() { return false; }
+
+	@ConfigItem(
+			keyName = "agilityArena",
+			name = "Agility Arena/Graceful",
+			description = "Hide Agility Arena and Graceful Collection log CC broadcasts "
+	)
+	default boolean agilityArena() { return false; }
 }

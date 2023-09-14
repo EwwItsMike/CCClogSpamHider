@@ -35,7 +35,8 @@ public class CCClogSpamHiderPlugin extends Plugin
 
 	private final String ccClogMessage = "received a new collection log item:";
 	private final ArrayList<String> fossilNotes = new ArrayList<String>(Arrays.asList("Scribbled note", "Partial note", "Ancient note", "Ancient writings", "Experimental note", "Paragraph of text", "Musty smelling note", "Hastily scrawled note", "Old writing", "Short note"));
-
+	private final ArrayList<String> troubleBrewing = new ArrayList<>(Arrays.asList("naval shirt", "tricorn hat", "navy slacks", "flag", "Rum", "The stuff"));
+	private final ArrayList<String> castleWars = new ArrayList<>(Arrays.asList("Decorative", "Castlewars", "Saradomin banner", "Zamorak banner", "Saradomin halo", "Zamorak halo", "Guthix halo"));
 
 
 	//Source: ChatFilter plugin
@@ -74,6 +75,27 @@ public class CCClogSpamHiderPlugin extends Plugin
 			if (message.contains("Chompy bird hat"))
 //				System.out.println("[DEBUG] Message contains chompy bird hat");
 				spam = true;
+		}
+		if (config.agilityArena() && !spam){
+			if (message.contains("Graceful")){
+				spam = true;
+			}
+		}
+		if (config.troubleBrewing() && !spam){
+			for (String s : troubleBrewing){
+				if (message.contains(s)){
+					spam = true;
+					break;
+				}
+			}
+		}
+		if (config.castleWars() && !spam){
+			for (String s : castleWars){
+				if (message.contains(s)){
+					spam = true;
+					break;
+				}
+			}
 		}
 
 		if (spam){
