@@ -77,7 +77,8 @@ public interface CCClogSpamHiderConfig extends Config
 			keyName = "sharedClueLog",
 			name = "Shared Clue Rewards",
 			description = "Hide Shared Clue Rewards Collection log cc broadcasts",
-			section = cluesSection
+			section = cluesSection,
+			position = 0
 	)
 	default boolean sharedClueLog() {return true;}
 
@@ -85,7 +86,8 @@ public interface CCClogSpamHiderConfig extends Config
 			keyName = "beginnerClueLog",
 			name = "Beginner Clue Rewards",
 			description = "Hide Beginner Clue Rewards Collection log cc broadcasts",
-			section = cluesSection
+			section = cluesSection,
+			position = 1
 	)
 	default boolean beginnerClueLog() {return false;}
 
@@ -93,7 +95,8 @@ public interface CCClogSpamHiderConfig extends Config
 			keyName = "easyClueLog",
 			name = "Easy Clue Rewards",
 			description = "Hide Easy Clue Rewards Collection log cc broadcasts",
-			section = cluesSection
+			section = cluesSection,
+			position = 2
 	)
 	default boolean easyClueLog() {return false;}
 
@@ -101,7 +104,8 @@ public interface CCClogSpamHiderConfig extends Config
 			keyName = "mediumClueLog",
 			name = "Medium Clue Rewards",
 			description = "Hide Medium Clue Rewards Collection log cc broadcasts",
-			section = cluesSection
+			section = cluesSection,
+			position = 3
 	)
 	default boolean mediumClueLog() {return false;}
 
@@ -109,7 +113,8 @@ public interface CCClogSpamHiderConfig extends Config
 			keyName = "HardClueLog",
 			name = "Hard Clue Rewards",
 			description = "Hide Hard Clue Rewards Collection log cc broadcasts",
-			section = cluesSection
+			section = cluesSection,
+			position = 4
 	)
 	default boolean hardClueLog() {return false;}
 
@@ -117,7 +122,8 @@ public interface CCClogSpamHiderConfig extends Config
 			keyName = "eliteClueLog",
 			name = "Elite Clue Rewards",
 			description = "Hide Elite Clue Rewards Collection log cc broadcasts",
-			section = cluesSection
+			section = cluesSection,
+			position = 5
 	)
 	default boolean eliteClueLog() {return false;}
 
@@ -125,7 +131,8 @@ public interface CCClogSpamHiderConfig extends Config
 			keyName = "masterClueLog",
 			name = "Master Clue Rewards",
 			description = "Hide Master Clue Rewards Collection log cc broadcasts",
-			section = cluesSection
+			section = cluesSection,
+			position = 6
 	)
 	default boolean masterClueLog() {return false;}
 
