@@ -1,6 +1,6 @@
 # CC Collection log Spam Hider
 
-This simple plugin hides certain collection log broadcasts that can be percieved as "spammy".
+This simple plugin hides certain collection log broadcasts that can be perceived as "spammy".
 By default the following collection log pages are filtered:
 - Fossil island notes
 - Chompy bird hats
