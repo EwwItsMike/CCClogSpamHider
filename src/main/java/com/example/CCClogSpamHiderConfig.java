@@ -143,5 +143,4 @@ public interface CCClogSpamHiderConfig extends Config
 			section = otherSection
 	)
 	default boolean myNotesLog() {return true;}
-
 }

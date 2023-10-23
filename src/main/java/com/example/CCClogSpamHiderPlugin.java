@@ -40,8 +40,8 @@ public class CCClogSpamHiderPlugin extends Plugin
 	private final ArrayList<String> sharedClueItems = new ArrayList<>(Arrays.asList("Saradomin page", "Zamorak page", "Guthix page", "Bandos page", "Armadyl page", "Ancient page 1", "Ancient page 2", "Ancient page 3", "Ancient page 4", "blessing", "teleport", "firelighter", "Purple sweets", "Charge dragonstone", "Master scroll book"));
 	private final ArrayList<String> beginnerClueItems = new ArrayList<>(Arrays.asList("Mole slippers", "Frog slippers", "Bear feet", "Demon feet", "Jester cape", "Shoulder parrot", "Monk's robe top (t)", "Monk's robe (t)", "Sandwich lady", "Rune scimitar ornament kit", "Black pickaxe"));
 	private final ArrayList<String> easyClueItems = new ArrayList<>(Arrays.asList("Golden chef's hat", "Golden apron", "Wooden shield (g)", "Black full helm", "Black plate", "Black kiteshield", "Black shield", "Black helm", "Steel full helm", "Steel plate", "Steel kiteshield", "Iron full helm", "Iron plate", "Iron kiteshield", "Bronze full helm", "Bronze plate", "Bronze kiteshield", "Studded", "wizard hat", "wizard robe (", "skirt (", "Saradomin robe", "Guthix robe", "Zamorak robe", "Ancient robe", "Armadyl robe", "Bandos robe", "Bob's", "Highwayman", "beret", "powdered wig", "Beanie", "Imp mask", "Goblin mask", "Sleeping cap", "Flared trousers", "Pantaloons", "Black cane", "bob the cat", "Red elegant", "Blue elegant", "magic (t)", "power (t)", "Black pickaxe", "Ham joint", "Rain bow", "Willow comp"));
-	private final ArrayList<String> mediumClueItems = new ArrayList<>(Arrays.asList("Adamant full", "Adamant plate", "Adamant kiteshield", "Adamant shield", "Adamant helm", "Mithril full", "Mithril plate", "Mithril kiteshield", "Green d'hide", "mitre", "Saradomin cloak", "Guthix cloak", "Zamorak cloak", "Ancient cloak", "Armadyl cloak", "Bandos cloak", "Acient stole", "Ancient crozier", "Armadyl stole", "Armadyl crozier", "Bandos stole", "Bandos crozier", "boater", "headband", "Crier", "Penguin mask", "eprechaun hat", "Wolf mask", "Wolf cloak", "Purple elegant", "Black elegant", "White elegant", "Pink elegant", "Gold elegant", "Gnomish", "Strength amulet (t)", "Yew comp", "banner", "Cabbage round", "unicorn mask", "Adamant cane", "Cat mask"));
-	private final ArrayList<String> hardClueItems = new ArrayList<>(Arrays.asList("Robin hood", "Dragon boots ornament", "Rune defender ornament", "-om ornament", "Berserker necklace ornament", "Rune full", "Rune plate", "Rune kite", "Zamorak full", "Zamorak plate", "Zamorak kite", "Guthix full", "Guthix plate", "Guthix kite", "Saradomin full", "Saradomin plate", "Saradomin kite", "Acient full", "Ancient plate", "Ancient kite", "Bandos full", "Bandos plate", "Bandos kite", "Rune shield", "Rune helm", "Saradomin coif", "Saradomin d'hide", "bracers", "Guthix coif", "Guthix d'hide", "Zamorak coif", "Zamorak d'hide", "Bandos coif", "Bandos d'hide", "Armadyl coif", "Armadyl d'hide", "Ancient coif", "Ancient d'hide", "Red d'hide", "Blue d'hide", "Enchanted", "Saradomin stole", "Zamorak stole", "Guthix stole", "Saradomin crozier", "Zamorak crozier", "Guthix crozier", "Zombie head", "Cyclops head", "Pirate's hat", "cavelier", "Pith helmet", "Explorer backpack", "Thieving sack", "Green dragon", "Blue dragon", "Red dragon", "Black dragon", "Nunchaku", "Dual sai", "Rune cane", "glory (", "Magic comp"));
+	private final ArrayList<String> mediumClueItems = new ArrayList<>(Arrays.asList("Adamant full", "Ancient stole", "Adamant plate", "Adamant kiteshield", "Adamant shield", "Adamant helm", "Mithril full", "Mithril plate", "Mithril kiteshield", "Green d'hide", "mitre", "Saradomin cloak", "Guthix cloak", "Zamorak cloak", "Ancient cloak", "Armadyl cloak", "Bandos cloak", "Acient stole", "Ancient crozier", "Armadyl stole", "Armadyl crozier", "Bandos stole", "Bandos crozier", "boater", "headband", "Crier", "Penguin mask", "eprechaun hat", "Wolf mask", "Wolf cloak", "Purple elegant", "Black elegant", "White elegant", "Pink elegant", "Gold elegant", "Gnomish", "Strength amulet (t)", "Yew comp", "banner", "Cabbage round", "unicorn mask", "Adamant cane", "Cat mask"));
+	private final ArrayList<String> hardClueItems = new ArrayList<>(Arrays.asList("Robin hood", "Bandos chaps", "Dragon boots ornament", "Rune defender ornament", "-om ornament", "Berserker necklace ornament", "Rune full", "Rune plate", "Rune kite", "Zamorak full", "Zamorak plate", "Zamorak kite", "Guthix full", "Guthix plate", "Guthix kite", "Saradomin full", "Saradomin plate", "Saradomin kite", "Acient full", "Ancient plate", "Ancient kite", "Bandos full", "Bandos plate", "Bandos kite", "Rune shield", "Rune helm", "Saradomin coif", "Saradomin d'hide", "bracers", "Guthix coif", "Guthix d'hide", "Zamorak coif", "Zamorak d'hide", "Bandos coif", "Bandos d'hide", "Armadyl coif", "Armadyl d'hide", "Ancient coif", "Ancient d'hide", "Red d'hide", "Blue d'hide", "Enchanted", "Saradomin stole", "Zamorak stole", "Guthix stole", "Saradomin crozier", "Zamorak crozier", "Guthix crozier", "Zombie head", "Cyclops head", "Pirate's hat", "cavelier", "Pith helmet", "Explorer backpack", "Thieving sack", "Green dragon", "Blue dragon", "Red dragon", "Black dragon", "Nunchaku", "Dual sai", "Rune cane", "glory (", "Magic comp"));
 	private final ArrayList<String> eliteClueItems = new ArrayList<>(Arrays.asList("Fury ornament", "chainbody ornament", "Dragon legs/", "sq shield ornament", "full helm ornament", "Dragon scimitar ornament", "infinity colour", "Holy wraps", "Ranger gloves", "Ranger's", "Black d'hide", "Royal", "Musketeer", "Arceuus scarf", "Hosidius scarf", "Piscarilius scarf", "Shayzien scarf", "Lovakengj scarf", "Bronze dragon", "Iron dragon", "Steel dragon", "Mithril dragon", "Adamant dragon", "Rune dragon", "Katana", "Dragon cane", "Briefcase", "Blacksmith's helm", "Deerstalker", "Afro", "Big pirate hat", "Top hat", "Monocle", "Sagacious", "Fremennik kilt", "Giant boot", "Uri's hat"));
 	private final ArrayList<String> masterClueItems = new ArrayList<>(Arrays.asList("godsword ornament", "Occult ornament", "Torture ornament", "Anguish ornament", "Dragon defender ornament", "Tormented ornament", "of darkness", "Samurai ", "Shayzien hood", "Hosidius hood", "Arceuus hood", "Piscarilius hood", "Lovakengj hood", "demon mask", "Left eye patch", "Bowl wig", "Ale of the gods", "cape (r)", "moon spectacles", "Fancy tiara"));
 
@@ -150,7 +150,7 @@ public class CCClogSpamHiderPlugin extends Plugin
 				}
 			}
 			//Fun edge case as Bucket helm (g) is a megarare
-			if (message.equals("Bucket helm")){
+			if (extractItemFromMessage(message).equals("Bucket helm")){
 				spam = true;
 			}
 		}
@@ -163,7 +163,7 @@ public class CCClogSpamHiderPlugin extends Plugin
 			}
 		}
 		if (config.myNotesLog() && !spam){
-			if (message.equals("Ancient page")){
+			if (extractItemFromMessage(message).equals("Ancient page")){
 				spam = true;
 			}
 		}
@@ -172,6 +172,10 @@ public class CCClogSpamHiderPlugin extends Plugin
 			intStack[intStackSize - 3] = 0;
 		}
 
+	}
+
+	private String extractItemFromMessage(String s) {
+		return s.substring(s.indexOf(":")+ 1 ).substring(0, s.indexOf("(")).strip();
 	}
 
 }
