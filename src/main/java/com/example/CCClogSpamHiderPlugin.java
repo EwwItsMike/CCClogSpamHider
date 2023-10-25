@@ -44,7 +44,7 @@ public class CCClogSpamHiderPlugin extends Plugin
 	private final ArrayList<String> hardClueItems = new ArrayList<>(Arrays.asList("Robin hood", "Bandos chaps", "Dragon boots ornament", "Rune defender ornament", "-om ornament", "Berserker necklace ornament", "Rune full", "Rune plate", "Rune kite", "Zamorak full", "Zamorak plate", "Zamorak kite", "Guthix full", "Guthix plate", "Guthix kite", "Saradomin full", "Saradomin plate", "Saradomin kite", "Acient full", "Ancient plate", "Ancient kite", "Bandos full", "Bandos plate", "Bandos kite", "Rune shield", "Rune helm", "Saradomin coif", "Saradomin d'hide", "bracers", "Guthix coif", "Guthix d'hide", "Zamorak coif", "Zamorak d'hide", "Bandos coif", "Bandos d'hide", "Armadyl coif", "Armadyl d'hide", "Ancient coif", "Ancient d'hide", "Red d'hide", "Blue d'hide", "Enchanted", "Saradomin stole", "Zamorak stole", "Guthix stole", "Saradomin crozier", "Zamorak crozier", "Guthix crozier", "Zombie head", "Cyclops head", "Pirate's hat", "cavalier", "Pith helmet", "Explorer backpack", "Thieving sack", "Green dragon", "Blue dragon", "Red dragon", "Black dragon", "Nunchaku", "Dual sai", "Rune cane", "glory (", "Magic comp"));
 	private final ArrayList<String> eliteClueItems = new ArrayList<>(Arrays.asList("Fury ornament", "chainbody ornament", "Dragon legs/", "sq shield ornament", "full helm ornament", "Dragon scimitar ornament", "infinity colour", "Holy wraps", "Ranger gloves", "Ranger's", "Black d'hide", "Royal", "Musketeer", "Arceuus scarf", "Hosidius scarf", "Piscarilius scarf", "Shayzien scarf", "Lovakengj scarf", "Bronze dragon", "Iron dragon", "Steel dragon", "Mithril dragon", "Adamant dragon", "Rune dragon", "Katana", "Dragon cane", "Briefcase", "Blacksmith's helm", "Deerstalker", "Afro", "Big pirate hat", "Top hat", "Monocle", "Sagacious", "Fremennik kilt", "Giant boot", "Uri's hat"));
 	private final ArrayList<String> masterClueItems = new ArrayList<>(Arrays.asList("godsword ornament", "Occult ornament", "Torture ornament", "Anguish ornament", "Dragon defender ornament", "Tormented ornament", "of darkness", "Samurai ", "Shayzien hood", "Hosidius hood", "Arceuus hood", "Piscarilius hood", "Lovakengj hood", "demon mask", "Left eye patch", "Bowl wig", "Ale of the gods", "cape (r)", "moon spectacles", "Fancy tiara"));
-
+	private final ArrayList<String> forestryItems = new ArrayList<>(Arrays.asList("Fox whistle", "Forestry", "Lumberjack", "Twitcher's gloves", "Funky shaped log", "Log basket", "Log brace", "Clothes pouch", "Cape pouch", "Felling axe handle", "Pheasant", "Petal garland"));
 
 	//Source: ChatFilter plugin
 	@Subscribe
@@ -165,6 +165,14 @@ public class CCClogSpamHiderPlugin extends Plugin
 		if (config.myNotesLog() && !spam){
 			if (extractItemFromMessage(message).equals("Ancient page")){
 				spam = true;
+			}
+		}
+		if (config.forestryLog() && !spam){
+			for (String s : forestryItems){
+				if (message.contains(s)){
+					spam = true;
+					break;
+				}
 			}
 		}
 

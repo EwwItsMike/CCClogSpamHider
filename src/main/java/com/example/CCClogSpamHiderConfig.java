@@ -143,4 +143,13 @@ public interface CCClogSpamHiderConfig extends Config
 			section = otherSection
 	)
 	default boolean myNotesLog() {return true;}
+
+	@ConfigItem(
+			keyName = "forestry",
+			name = "Forestry",
+			description = "Hide Forestry Collection log cc broadcasts",
+			section = otherSection
+	)
+	default boolean forestryLog() {return true;}
+
 }
